@@ -1,0 +1,335 @@
+
+<!-- ===== Fonts & minimal style (works on GitHub Pages, same pattern as FreqExit) ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --text:#1f2328; --muted:#57606a; --accent:#1f6feb; --pill:#2f363d; --gold:#d4a72c;
+    --maxw:1100px;
+  }
+  body{
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+  }
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:24px 16px 48px;
+  }
+  .title{
+    font-size:40px;
+    font-weight:800;
+    line-height:1.15;
+    text-align:center;
+    color:var(--text);
+    margin:18px 0 8px;
+  }
+  .venue{
+    font-size:22px;
+    font-weight:700;
+    color:#d12;
+    text-align:center;
+    margin:4px 0 18px;
+  }
+  .authors,.affils{
+    text-align:center;
+    color:var(--muted);
+    font-size:18px;
+  }
+  .authors a{
+    color:var(--text);
+    text-decoration:none;
+    font-weight:600;
+  }
+  .authors a[href]{
+    color:#0969da;
+  }
+  .authors a[href]:hover{ text-decoration:underline; }
+  sup{font-size:.75em}
+  .badges{
+    text-align:center;
+    margin:26px 0 20px;
+  }
+  .badge{
+    display:inline-block;
+    margin:6px 8px;
+    padding:10px 14px;
+    border-radius:14px;
+    background:var(--pill);
+    color:#fff;
+    font-weight:700;
+    letter-spacing:.3px;
+    text-decoration:none;
+    box-shadow:0 2px 6px rgba(0,0,0,.12);
+  }
+  .badge.blue{ background:var(--accent);}
+  .badge.gold{ background:var(--gold); color:#1f2328;}
+  .center{ text-align:center;}
+  .section{
+    max-width: var(--maxw);
+    margin: 36px auto 0;
+    padding: 0 4px;
+  }
+  .section h2{
+    font-size:28px;
+    font-weight:800;
+    text-align:center;
+    color:var(--text);
+    margin:0 0 6px;
+  }
+  .section p{
+    font-size:16px;
+    line-height:1.7;
+    color:var(--text);
+  }
+  .section .lead{
+    max-width:880px;
+    margin:0 auto;
+    text-align:justify;
+  }
+  .figure{
+    text-align:center;
+    margin:22px auto;
+  }
+  .figure img{
+    max-width:78%;
+    height:auto;
+    border-radius:8px;
+    box-shadow:0 1px 4px rgba(0,0,0,.08);
+  }
+  .figure.wide img{ max-width:72%; }
+  .figure.medium img{ max-width:55%; }
+  .figure.narrow img{ max-width:60%; }
+  .figure .caption{
+    font-size:14px;
+    color:var(--muted);
+    margin-top:8px;
+    font-style:italic;
+    max-width:760px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .insight{
+    max-width:880px;
+    margin:18px auto 0;
+    padding:12px 16px;
+    background:#f6f8fa;
+    border-left:4px solid var(--accent);
+    border-radius:6px;
+    font-size:16px;
+    line-height:1.7;
+  }
+  .section ol{
+    max-width:880px;
+    margin:14px auto 0;
+    font-size:16px;
+    line-height:1.7;
+  }
+  .section ol li{ margin-bottom:10px; }
+  .results-note{
+    text-align:center;
+    color:var(--muted);
+    font-size:14px;
+    margin:6px 0 18px;
+  }
+  table.results{
+    border-collapse:collapse;
+    margin:10px auto 18px;
+    font-size:13.5px;
+  }
+  table.results th, table.results td{
+    border:1px solid #d0d7de;
+    padding:5px 9px;
+    text-align:right;
+    white-space:nowrap;
+  }
+  table.results th{ background:#f6f8fa; font-weight:700; text-align:center; }
+  table.results td.m, table.results th.m{ text-align:left; }
+  table.results tr.subhdr th{ background:#eaeef2; font-style:italic; }
+  .quality-row{ display:flex; justify-content:center; gap:18px; flex-wrap:wrap; margin:10px 0 18px; }
+  .quality-row table.results th[colspan]{ background:#eaeef2; }
+  .quality-row td, .quality-row th{ padding:5px 11px; }
+  pre{
+    background:#f6f8fa;
+    padding:14px 16px;
+    border-radius:8px;
+    overflow-x:auto;
+    font-size:13px;
+  }
+</style>
+
+<div class="wrap">
+
+  <h1 class="title">ARC-Decode: Accelerated Decoding with Risk-Bounded Acceptance</h1>
+  <div class="venue">ICML 2026</div>
+
+  <div class="authors">
+    <a href="https://neuraliying.github.io/">Ying Li</a><sup>1</sup>,
+    <a>Zhaode Wang</a><sup>2</sup>,
+    <a>Zhiwen Chen</a><sup>2</sup>,
+    <a>Chengfei Lv</a><sup>2</sup>,
+    <a href="https://huanwang.tech/">Huan Wang</a><sup>1</sup>
+  </div>
+  <div class="affils">
+    <sup>1</sup>Westlake University &nbsp;·&nbsp; <sup>2</sup>Alibaba Group
+  </div>
+
+  <div class="badges">
+    <a class="badge blue" href="https://github.com/NeuraLiying/ARC-Decode" target="_blank">Code</a>
+    <a class="badge blue" href="https://icml.cc/virtual/2026/poster/66788" target="_blank">Paper</a>
+    <a class="badge gold" href="https://opensource.org/license/apache-2-0" target="_blank">Apache 2.0</a>
+  </div>
+
+  <div class="section">
+    <h2>Abstract</h2>
+    <p class="lead">
+      As larger language models deliver stronger capabilities, their autoregressive inference becomes
+      increasingly expensive. Speculative decoding accelerates generation by letting a fast draft propose
+      tokens that the target model verifies in parallel. Yet under sampling (T &gt; 0), observed speedups
+      consistently lag behind those under greedy decoding, as the classical lossless verification rule tends
+      to over-reject low-risk drafts, leading to lower acceptance rates and limited acceleration. To address
+      this gap, we propose <b>ARC-Decode (Acceptance with Risk Control)</b>, a training-free method that
+      augments speculative decoding without extra forward passes. ARC-Decode enables relaxed acceptance by
+      identifying drafts whose acceptance is expected to induce limited local distributional deviation under
+      a calibrated risk criterion based on Jensen&ndash;Shannon divergence. It combines confidence-based
+      pre-verification filtering with a risk-bounded acceptance criterion derived from an analytic upper bound
+      on the potential distributional deviation. Integrated into the state-of-the-art EAGLE-3 pipeline,
+      ARC-Decode increases accept length per cycle and reduces verification compute, achieving up to
+      <b>1.6&times; end-to-end speedup over EAGLE-3</b> under sampling with comparable generation quality
+      across the evaluated benchmarks.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Problem</h2>
+    <div class="figure">
+      <img src="assets/problem.png" alt="Problem">
+      <div class="caption">Why does speculative decoding slow down under sampling?</div>
+    </div>
+    <p class="lead">
+      <b>Key Problem.</b> EAGLE-3 exhibits significant degradation in decoding efficiency under sampling,
+      with performance further deteriorating as temperature increases, leading to reduced acceptance length
+      in speculative decoding.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Motivation</h2>
+    <p class="lead"><b>Are the rejected tokens under sampling actually harmful?</b></p>
+
+    <div class="figure medium">
+      <img src="assets/motivation_1.png" alt="Motivation 1">
+      <div class="caption">Many rejected drafts yield highly consistent continuations under multiple surrogate semantic metrics.</div>
+    </div>
+    <p class="lead">
+      <b>Observation 1.</b> Many rejected drafts yield highly consistent continuations under multiple surrogate
+      semantic metrics, suggesting that token-level rejection does not necessarily imply a downstream change.
+    </p>
+
+    <div class="figure medium">
+      <img src="assets/motivation_2.png" alt="Motivation 2">
+      <div class="caption">Counterfactual rollouts reveal substantial recoverable acceptance space.</div>
+    </div>
+    <p class="lead">
+      <b>Observation 2.</b> Counterfactual rollouts reveal substantial recoverable acceptance space: many
+      full-rejection events contain rejected draft candidates that still preserve the correct final answer.
+    </p>
+
+    <div class="insight">
+      <b>Key insight.</b> Under sampling, posterior rejection sampling can reject draft candidates that would
+      still preserve the reasoning trajectory and final answer, revealing additional acceptance space that can
+      be exploited under bounded risk.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Method</h2>
+    <div class="figure wide">
+      <img src="assets/method.png" alt="ARC-Decode method overview">
+      <div class="caption">Overview of ARC-Decode: entropy-guided pruning, local shift estimation, and risk-bounded acceptance.</div>
+    </div>
+    <ol>
+      <li><b>Entropy-guided pruning reduces verification cost.</b> Draft nodes are ranked by path probability, target entropy, and depth to form a compact prefix-closed subtree.</li>
+      <li><b>Local shift estimation finds low-risk relaxation opportunities.</b> For rejected tokens, ARC-Decode combines target logit margin and whitened embedding distance to estimate local distribution shift.</li>
+      <li><b>Risk-bounded acceptance extends accepted sequences.</b> A calibrated Local Tolerance Score selectively relaxes low-shift rejections while retaining standard posterior acceptance as the floor.</li>
+    </ol>
+    <div class="insight">
+      <b>Summary.</b> Training-free, plug-and-play, and free of extra target forward passes.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Results</h2>
+    <p class="results-note">
+      Full-data results on NVIDIA A100 GPUs, <code>temperature=1.0</code>, <code>total_tokens=60</code>, <code>depth=7</code>.
+      Each benchmark reports accept length, throughput (tok/s), and speedup (<code>method / Base</code>). Best in <b>bold</b>.
+    </p>
+
+    <!-- Llama 8B -->
+    <table class="results">
+      <tr class="subhdr"><th class="m" colspan="14">Llama 8B</th></tr>
+      <tr><th class="m">method</th><th>MTB acc</th><th>MTB tp</th><th>MTB sp</th><th>HE acc</th><th>HE tp</th><th>HE sp</th><th>GS acc</th><th>GS tp</th><th>GS sp</th><th>Alp acc</th><th>Alp tp</th><th>Alp sp</th></tr>
+      <tr><td class="m">Base</td><td>1.000</td><td>33.093</td><td>1.00&times;</td><td>1.000</td><td>31.550</td><td>1.00&times;</td><td>1.000</td><td>31.964</td><td>1.00&times;</td><td>1.000</td><td>32.078</td><td>1.00&times;</td></tr>
+      <tr><td class="m">Eagle-3 base</td><td>3.121</td><td>66.099</td><td>2.00&times;</td><td>4.529</td><td>90.712</td><td>2.88&times;</td><td>5.184</td><td>108.828</td><td>3.40&times;</td><td>5.054</td><td>105.546</td><td>3.29&times;</td></tr>
+      <tr><td class="m"><b>ARC (Ours)</b></td><td><b>6.324</b></td><td><b>131.062</b></td><td><b>3.96&times;</b></td><td><b>5.115</b></td><td><b>93.581</b></td><td><b>2.97&times;</b></td><td><b>6.648</b></td><td><b>125.713</b></td><td><b>3.93&times;</b></td><td><b>6.223</b></td><td><b>125.667</b></td><td><b>3.92&times;</b></td></tr>
+    </table>
+
+    <!-- Qwen 8B -->
+    <table class="results">
+      <tr class="subhdr"><th class="m" colspan="14">Qwen 8B</th></tr>
+      <tr><th class="m">method</th><th>MTB acc</th><th>MTB tp</th><th>MTB sp</th><th>HE acc</th><th>HE tp</th><th>HE sp</th><th>GS acc</th><th>GS tp</th><th>GS sp</th><th>Alp acc</th><th>Alp tp</th><th>Alp sp</th></tr>
+      <tr><td class="m">Base</td><td>1.000</td><td>27.597</td><td>1.00&times;</td><td>1.000</td><td>27.206</td><td>1.00&times;</td><td>1.000</td><td>27.614</td><td>1.00&times;</td><td>1.000</td><td>27.937</td><td>1.00&times;</td></tr>
+      <tr><td class="m">Eagle-3 base</td><td>4.046</td><td>78.610</td><td>2.85&times;</td><td>4.170</td><td>71.741</td><td>2.64&times;</td><td>5.367</td><td>92.632</td><td>3.35&times;</td><td>4.444</td><td>81.025</td><td>2.90&times;</td></tr>
+      <tr><td class="m"><b>ARC (Ours)</b></td><td><b>4.978</b></td><td><b>95.246</b></td><td><b>3.45&times;</b></td><td><b>4.232</b></td><td><b>76.058</b></td><td><b>2.80&times;</b></td><td><b>5.782</b></td><td><b>96.850</b></td><td><b>3.51&times;</b></td><td><b>5.008</b></td><td><b>92.196</b></td><td><b>3.30&times;</b></td></tr>
+    </table>
+
+    <!-- Vicuna 13B -->
+    <table class="results">
+      <tr class="subhdr"><th class="m" colspan="14">Vicuna 13B</th></tr>
+      <tr><th class="m">method</th><th>MTB acc</th><th>MTB tp</th><th>MTB sp</th><th>HE acc</th><th>HE tp</th><th>HE sp</th><th>GS acc</th><th>GS tp</th><th>GS sp</th><th>Alp acc</th><th>Alp tp</th><th>Alp sp</th></tr>
+      <tr><td class="m">Base</td><td>1.000</td><td>29.155</td><td>1.00&times;</td><td>1.000</td><td>28.363</td><td>1.00&times;</td><td>1.000</td><td>30.109</td><td>1.00&times;</td><td>1.000</td><td>30.127</td><td>1.00&times;</td></tr>
+      <tr><td class="m">Eagle-3 base</td><td>5.354</td><td>106.458</td><td>3.65&times;</td><td>5.656</td><td>102.363</td><td>3.61&times;</td><td>5.731</td><td>117.032</td><td>3.89&times;</td><td>5.228</td><td>99.424</td><td>3.30&times;</td></tr>
+      <tr><td class="m"><b>ARC (Ours)</b></td><td><b>6.880</b></td><td><b>134.596</b></td><td><b>4.62&times;</b></td><td><b>6.905</b></td><td><b>131.057</b></td><td><b>4.62&times;</b></td><td><b>6.796</b></td><td><b>126.542</b></td><td><b>4.20&times;</b></td><td><b>6.582</b></td><td><b>131.506</b></td><td><b>4.37&times;</b></td></tr>
+    </table>
+
+    <p class="results-note">Quality: HumanEval = pass@10, GSM8K = exact match. Best in <b>bold</b>.</p>
+    <div class="quality-row">
+      <table class="results">
+        <tr><th colspan="3">llama</th></tr>
+        <tr><th class="m">method</th><th>humaneval</th><th>gsm8k</th></tr>
+        <tr><td class="m">Base</td><td>0.6037</td><td><b>0.7125</b></td></tr>
+        <tr><td class="m">Eagle-3 base</td><td>0.5549</td><td>0.6375</td></tr>
+        <tr><td class="m">ARC (Ours)</td><td><b>0.7439</b></td><td>0.7074</td></tr>
+      </table>
+      <table class="results">
+        <tr><th colspan="3">qwen</th></tr>
+        <tr><th class="m">method</th><th>humaneval</th><th>gsm8k</th></tr>
+        <tr><td class="m">Base</td><td><b>0.8537</b></td><td>0.7875</td></tr>
+        <tr><td class="m">Eagle-3 base</td><td><b>0.8537</b></td><td>0.8125</td></tr>
+        <tr><td class="m">ARC (Ours)</td><td><b>0.8537</b></td><td><b>0.8211</b></td></tr>
+      </table>
+      <table class="results">
+        <tr><th colspan="3">vicuna</th></tr>
+        <tr><th class="m">method</th><th>humaneval</th><th>gsm8k</th></tr>
+        <tr><td class="m">Base</td><td>0.1220</td><td>0.1625</td></tr>
+        <tr><td class="m">Eagle-3 base</td><td>0.1159</td><td>0.1625</td></tr>
+        <tr><td class="m">ARC (Ours)</td><td><b>0.2744</b></td><td><b>0.1971</b></td></tr>
+      </table>
+    </div>
+
+    <div class="figure narrow">
+      <img src="assets/exp_1.png" alt="A6000 results">
+      <div class="caption">Additional efficiency results on a single NVIDIA A6000 GPU (<code>total_tokens=32</code>, <code>depth=6</code>).</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>BibTeX</h2>
+    <pre><code class="language-bibtex">@inproceedings{li2026arcdecode,
+  title     = {ARC-Decode: Accelerated Decoding with Risk-Bounded Acceptance},
+  author    = {Li, Ying and Wang, Zhaode and Chen, Zhiwen and Lv, Chengfei and Wang, Huan},
+  booktitle = {Proceedings of the 43rd International Conference on Machine Learning (ICML)},
+  year      = {2026}
+}</code></pre>
+  </div>
+
+</div> <!-- /wrap -->
